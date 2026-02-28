@@ -1,0 +1,10 @@
+scanpy
+scvi-tools
+torch
+loompy
+pybiomart
+pytorch-lightning
+leidenalg
+igraph
+optax
+jax

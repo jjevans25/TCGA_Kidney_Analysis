@@ -1,0 +1,10 @@
+# Ignore everything by default
+*
+
+# Allow only specific files
+!.gitignore
+!kidney_model_training.py
+!scVI_Kidney_analysis.ipynb
+!TCGA_Kidney_Preprocessing.ipynb
+!requirements.txt
+!README.md
