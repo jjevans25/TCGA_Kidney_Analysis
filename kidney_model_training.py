@@ -158,7 +158,7 @@ scvi.model.SCVI.setup_anndata(
 # Initialize the model
 model = scvi.model.SCVI(
     adata_hvg,
-    n_latent=30,
+    n_latent=15,
     n_layers=2,
     gene_likelihood="nb",  # Negative binomial for count data
 )
@@ -168,7 +168,7 @@ print(model)
 # Train the model
 # Using MPS (Metal Performance Shaders) acceleration for Apple Silicon / M4 Max
 model.train(
-    max_epochs=400,
+    max_epochs=500,
     early_stopping=True,
     early_stopping_patience=20,
     early_stopping_monitor="elbo_validation",
