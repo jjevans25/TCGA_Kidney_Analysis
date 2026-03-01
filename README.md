@@ -22,10 +22,11 @@ The analysis identifies and annotates cell populations in kidney tumors, includi
 ## Project Structure
 
 ```
-├── TCGA_Kidney_Preprocessing.ipynb   # Data download, extraction, and preprocessing
-├── kidney_model_training.py          # Standalone scVI model training script
-├── scVI_Kidney_analysis.ipynb        # Full analysis: QC → scVI → clustering → annotation
-├── requirements.txt                  # Python dependencies
+├── TCGA_Kidney_Preprocessing.ipynb       # Data download, extraction, and preprocessing
+├── kidney_model_training.py              # Standalone scVI model training script
+├── kidney_model_training_archive.py      # Archived previous training configuration
+├── scVI_Kidney_analysis.ipynb            # Full analysis: QC → scVI → clustering → annotation
+├── requirements.txt                      # Python dependencies
 └── README.md
 ```
 
@@ -49,7 +50,7 @@ Quality Control & Filtering (MAD-based outlier removal, MT% < 20%)
 HVG Selection (Seurat v3, top 4000 genes, batch-aware)
     │
     ▼
-scVI Model Training (30 latent dims, 2 layers, negative binomial likelihood)
+scVI Model Training (15 latent dims, 2 layers, negative binomial likelihood)
     │
     ▼
 Latent Space → Neighbors → UMAP
